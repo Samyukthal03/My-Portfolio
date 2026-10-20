@@ -19,3 +19,6 @@
 .line-marker{position:absolute;left:-64px;top:50%;height:1px;width:54px;background:color-mix(in srgb,var(--accent) calc(var(--effect)*100%),#6c6c6c);transform-origin:left;transform:translateY(-50%) scaleX(calc(.7 + var(--effect)*.5))}
 .line-index{font:11px 'Space Mono',monospace;letter-spacing:0;margin-right:18px;opacity:calc(.55 + var(--effect)*.45)}
 @media(max-width:767px){.hero{min-height:70svh;padding-top:65px;padding-bottom:100px}.hero h1{font-size:clamp(38px,9vw,64px);margin:26px 0 23px}.hero .lead{font-size:18px}.menu{padding:28px 22px}.line-sidebar{gap:24px}}
+
+/* Mobile/touch: no cat or feed prompt; show contact links directly. */
+@media (max-width:767px), (pointer:coarse){#oneko,#feedButton{display:none!important}#contactDetails{display:grid!important}}

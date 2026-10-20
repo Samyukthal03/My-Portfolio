@@ -22,3 +22,9 @@
 
 /* Mobile/touch: no cat or feed prompt; show contact links directly. */
 @media (max-width:767px), (pointer:coarse){#oneko,#feedButton{display:none!important}#contactDetails{display:grid!important}}
+
+/* Optional desktop cat mode; mobile stays cat-free. */
+.cat-toggle{margin-left:auto;margin-right:14px;border:1px solid var(--accent);border-radius:3px;background:transparent;color:var(--fg);padding:11px 14px;font:11px 'Space Mono',monospace;letter-spacing:.08em;cursor:pointer;white-space:nowrap}
+.cat-toggle[aria-pressed="true"]{background:var(--accent);color:var(--bg)}
+.cat-toggle:hover{border-color:var(--bright)}
+@media(max-width:767px),(pointer:coarse){.cat-toggle{display:none!important}#oneko,#feedButton{display:none!important}#contactDetails{display:grid!important}}
